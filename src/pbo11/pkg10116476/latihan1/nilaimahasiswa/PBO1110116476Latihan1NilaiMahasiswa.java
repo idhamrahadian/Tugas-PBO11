@@ -8,11 +8,11 @@ package pbo11.pkg10116476.latihan1.nilaimahasiswa;
 /**
  *
  * @author 
- * NAMA       : Idham Rahadian 
- * KELAS      : PBO11 
- * NIM        : 10116476 
- * Deskripsi Program    : Program ini berisi program untuk menampilkan nilai 
- * mahasiswa yang telah di konversikan ke bentuk class dan objek
+ * NAMA     : Idham Rahadian 
+ * KELAS    : PBO11 
+ * NIM      : 10116476 
+ * Deskripsi Program    : Program ini berisi program untuk menampilkan 
+ * biodata dan nilai mahasiswa yang telah di konversikan ke bentuk class dan objek
  *
  */
 class Mahasiswa {
@@ -22,7 +22,7 @@ class Mahasiswa {
     char index = 0;
     double quiz, uts, uas;
 
-    void introduce() {
+    void viewBiodata() {
         for (int i = 1; i < 5; i++) {
             System.out.println("Nama ke " + i + "\t\t= " + name);
         }
@@ -36,23 +36,28 @@ class Mahasiswa {
         double nUts = 0.3 * uts;
         double nUas = 0.5 * uas;
 
-        double nilai = nQuiz + nUts + nUas;
+        double nAkhir = nQuiz + nUts + nUas;
 
         System.out.println("\nQUIZ \t\t= " + quiz);
         System.out.println("UTS \t\t= " + uts);
         System.out.println("UAS \t\t= " + uas);
 
-        System.out.println("\nNilai Akhir \t= " + nilai);
+        System.out.println("\nNilai Akhir \t= " + nAkhir);
 
-        if (nilai > 80 && nilai <= 100) {
+        if (nAkhir > 80 && nAkhir
+                <= 100) {
             index = 'A';
-        } else if (nilai > 68 && nilai <= 80) {
+        } else if (nAkhir > 68 && nAkhir
+                <= 80) {
             index = 'B';
-        } else if (nilai > 56 && nilai <= 68) {
+        } else if (nAkhir > 56 && nAkhir
+                <= 68) {
             index = 'C';
-        } else if (nilai > 45 && nilai <= 56) {
+        } else if (nAkhir > 45 && nAkhir
+                <= 56) {
             index = 'D';
-        } else if (nilai <= 45) {
+        } else if (nAkhir
+                <= 45) {
             index = 'E';
         }
 
@@ -82,6 +87,7 @@ class Mahasiswa {
                 System.out.println("\nUNRECOGNIZE");
         }
     }
+
 }
 
 public class PBO1110116476Latihan1NilaiMahasiswa {
@@ -94,13 +100,13 @@ public class PBO1110116476Latihan1NilaiMahasiswa {
         Mahasiswa mhs1 = new Mahasiswa();
         mhs1.name = "Rizki Adam Kurniawan";
         mhs1.nim = "7.51.15.036.";
-        mhs1.introduce();
+        mhs1.viewBiodata();
 
-        Mahasiswa nMhs1 = new Mahasiswa();
-        nMhs1.quiz = 30;
-        nMhs1.uts = 80;
-        nMhs1.uas = 40;
-        nMhs1.countNilai();
+        mhs1.quiz = 30;
+        mhs1.uts = 80;
+        mhs1.uas = 40;
+        mhs1.countNilai();
+
     }
 
 }
